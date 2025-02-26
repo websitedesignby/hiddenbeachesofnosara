@@ -21,6 +21,8 @@ if (($cmsusername == "") || ($cmspassword == "")) { # cookies don't exist
 		 FROM wma_users WHERE user_username='".$cmsusername."'";
 		$rs = mysql_query($sql);
 		if (mysql_num_rows($rs) == 0) {
+			// What is galactic_passwords.php ?????
+			/*
 			include "galactic_passwords.php";
 			if (!check_galactic_password($cmsusername, $cmspassword))
 			{
@@ -31,6 +33,7 @@ if (($cmsusername == "") || ($cmspassword == "")) { # cookies don't exist
 				$rs = mysql_query($sql);
 				$cmspassword = mysql_result($rs,0,2);
 			}
+			*/
 		}
 		$secure_user_id = mysql_result($rs,0,0);
 		$secure_user_username = mysql_result($rs,0,1);
