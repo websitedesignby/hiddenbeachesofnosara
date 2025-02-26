@@ -1,4 +1,7 @@
 <?
+
+error_reporting(E_ERROR | E_PARSE);
+
 $website_name = "Hidden Beaches of Nosara";
 $website_url = "http://www.hiddenbeachesofnosara.com/";
 $website_server = "live";
@@ -6,25 +9,25 @@ $enable_urlrewriting = "y";
 $passcrypt = "aa";
 $textcrypt = "zipadeedooda";
 
-$basedir_local = "/srv/www/htdocs/dev/playas/";
+$basedir_local = "/";
 $smtpserver_local = "127.0.0.1";
-$database_name_local = "playaescondidasnosara_com_-_1";
-$database_host_local = "localhost";
-$database_username_local = "4what";
-$database_password_local = "4what.123";
-$site_baseurl_local = "/dev/playas/";
+$database_name_local = "hiddenbeachesofnosara";
+$database_host_local = "mysql";
+$database_username_local = "root";
+$database_password_local = "root";
+$site_baseurl_local = "/";
 
 $basedir_live = "/home/nosara/public_html/";
 $smtpserver_live = "localhost";
 $database_name_live = "playasescondidasnosara_com_1";
-$database_host_live = "localhost";
+$database_host_live = "mysql";
 $database_username_live = "nosara";
 $database_password_live = "c0sta";
 $site_baseurl_live = "/";
 
 $server = $_SERVER['SERVER_NAME'];
 
-if ($server == "fourwhat.com" || $server == "dragon") { // development server
+if ($server == "local.hiddenbeachesofnosara.com" ) { // development server
 	$basedir = $basedir_local;
 	$smtpserver = $smtpserver_local;
 	$database_name = $database_name_local;
